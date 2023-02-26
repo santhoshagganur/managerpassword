@@ -1,0 +1,47 @@
+.each-password-container {
+  display: flex;
+  padding: 10px;
+  border-color: #c3caea;
+  border-style: solid;
+  border-width: 1px;
+  align-items: center;
+}
+
+.user-profile-pic {
+  background-color: blue;
+  color: #ffffff;
+  height: 50px;
+  border-radius: 25px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.website-name {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.user-name {
+  font-family: Roboto;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.delete-container {
+  margin-left: 20px;
+}
+
+.delete-button {
+  border-width: 0;
+  background-color: transparent;
+}
+
+.delete-icon {
+  height: 30px;
+  background-size: cover;
+}

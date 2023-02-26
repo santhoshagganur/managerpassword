@@ -1,0 +1,133 @@
+.bg-container {
+  background-color: #9ba9eb;
+  padding: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.app-logo {
+  height: 50px;
+  background-size: cover;
+}
+
+.user-details-container {
+  background-color: #5763a5;
+  border-radius: 10px;
+  border-width: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.user-details-card {
+  background-color: #454f84;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.user-details-heading {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.website-logo {
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+}
+
+.input-container {
+  background-color: #ffffff;
+  padding: 4px;
+  border-width: 0;
+  margin-bottom: 10px;
+}
+
+.input-element {
+  background-color: #ffffff;
+  border-width: 0;
+}
+
+.add-button {
+  background-color: #0b69ff;
+  color: #ffffff;
+  border-width: 0;
+  font-size: 14px;
+  width: 80px;
+  padding: 6px;
+}
+
+.button-container {
+  text-align: right;
+}
+
+.user-details-logo {
+  height: 40vh;
+  background-size: cover;
+}
+
+.user-passwords-container {
+  background-color: #5763a5;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
+}
+
+.user-passwords-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-icon-container {
+  height: 28px;
+  background-color: #ffffff;
+  padding: 5px;
+  margin-right: 2px;
+}
+
+.search-passwords-container {
+  background-color: #ffffff;
+  height: 30px;
+  border-width: 0;
+}
+
+.user-navbar {
+  display: flex;
+}
+
+.horizontal-line {
+  background-color: #c3caea;
+  border-width: 1px;
+}
+
+.label-element {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.show-passwords-container {
+  text-align: right;
+}
+
+.password-counter {
+  display: flex;
+}
+
+.counter {
+  color: #ffffff;
+  border-color: #c3caea;
+  height: 30px;
+  border-radius: 5px;
+  padding: 8px;
+  border-style: solid;
+  border-width: 1px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.resultant-passwords {
+  display: flex;
+}
