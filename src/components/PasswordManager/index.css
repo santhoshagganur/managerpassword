@@ -130,4 +130,5 @@
 
 .resultant-passwords {
   display: flex;
+  list-style-type: none;
 }

@@ -32,6 +32,12 @@ class PasswordManager extends Component {
     this.setState({website: event.target.value})
   }
 
+  deleteItemFromList = id => {
+    const {passwordsList} = this.state
+    const resultantPasswords = passwordsList.filter(each => each.id !== id)
+    this.setState({passwordsList: resultantPasswords})
+  }
+
   changeUsername = event => {
     this.setState({name: event.target.value})
   }
@@ -45,7 +51,7 @@ class PasswordManager extends Component {
   }
 
   render() {
-    const {name, website, password, passwordsList} = this.state
+    const {name, website, password, passwordsList, isChecked} = this.state
     const Passwords = passwordsList.length
 
     console.log(name)
@@ -56,7 +62,7 @@ class PasswordManager extends Component {
       <div className="bg-container">
         <img
           src="https://assets.ccbp.in/frontend/react-js/password-manager-logo-img.png"
-          alt="app-logo"
+          alt="app logo"
           className="app-logo"
         />
         <div className="user-details-container">
@@ -96,7 +102,7 @@ class PasswordManager extends Component {
                   className="website-logo"
                 />
                 <input
-                  type="text"
+                  type="password"
                   placeholder="Enter Password"
                   className="input-element"
                   onChange={this.changePassword}
@@ -149,11 +155,17 @@ class PasswordManager extends Component {
               Show Passwords
             </label>
           </div>
-          <div className="resultant-passwords">
+          <ul className="resultant-passwords">
             {passwordsList.map(each => (
-              <PasswordBox userPasswords={each} key={each.id} />
+              <PasswordBox
+                userPasswords={each}
+                key={each.id}
+                deleteItemFromList={this.deleteItemFromList}
+                isChecked={isChecked}
+                passwordsList={passwordsList}
+              />
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     )

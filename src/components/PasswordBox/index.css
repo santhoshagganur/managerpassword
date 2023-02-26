@@ -5,6 +5,7 @@
   border-style: solid;
   border-width: 1px;
   align-items: center;
+  margin-right: 20px;
 }
 
 .user-profile-pic {
@@ -43,5 +44,15 @@
 
 .delete-icon {
   height: 30px;
+  background-size: cover;
+}
+
+.hidden-password {
+  width: 100px;
+  background-size: cover;
+}
+
+.no-passwords {
+  height: 50vh;
   background-size: cover;
 }
