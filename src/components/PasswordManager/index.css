@@ -73,7 +73,6 @@
   background-color: #5763a5;
   border-radius: 10px;
   padding: 20px;
-  height: 50vh;
 }
 
 .user-passwords-navbar {
@@ -131,4 +130,22 @@
 .resultant-passwords {
   display: flex;
   list-style-type: none;
+}
+
+.no-passwords {
+  height: 30vh;
+  background-size: cover;
+}
+
+.no-passwords-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-text {
+  font-size: 25px;
+  color: #ffffff;
+  font-size: 500;
 }
