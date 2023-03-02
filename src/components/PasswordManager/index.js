@@ -10,6 +10,7 @@ class PasswordManager extends Component {
     website: '',
     password: '',
     isChecked: false,
+    searchInput: '',
   }
 
   submitDetails = event => {
@@ -50,10 +51,25 @@ class PasswordManager extends Component {
     this.setState(prevState => ({isChecked: !prevState.isChecked}))
   }
 
+  changeResults = event => {
+    this.setState({searchInput: event.target.value})
+  }
+
+  searchResults = () => {
+    const {searchInput, passwordsList} = this.state
+
+    return passwordsList.filter(each =>
+      each.website.toLowerCase().includes(searchInput.toLowerCase()),
+    )
+  }
+
   render() {
     const {name, website, password, passwordsList, isChecked} = this.state
-    const Passwords = passwordsList.length
 
+    const Passwords = passwordsList.length
+    const searchResults = this.searchResults()
+
+    console.log(searchResults)
     console.log(name)
     console.log(password)
     console.log(website)
@@ -140,6 +156,7 @@ class PasswordManager extends Component {
                 type="search"
                 className="search-passwords-container"
                 placeholder="search"
+                onChange={this.changeResults}
               />
             </div>
           </div>
@@ -156,15 +173,25 @@ class PasswordManager extends Component {
             </label>
           </div>
           <ul className="resultant-passwords">
-            {passwordsList.map(each => (
-              <PasswordBox
-                userPasswords={each}
-                key={each.id}
-                deleteItemFromList={this.deleteItemFromList}
-                isChecked={isChecked}
-                passwordsList={passwordsList}
-              />
-            ))}
+            {passwordsList.length === 0 ? (
+              <div className="no-passwords-container">
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
+                  alt="no passwords"
+                  className="no-passwords"
+                />
+                <p className="result-text"> No Passwords </p>
+              </div>
+            ) : (
+              searchResults.map(each => (
+                <PasswordBox
+                  userPasswords={each}
+                  deleteItemFromList={this.deleteItemFromList}
+                  isChecked={isChecked}
+                  key={each.id}
+                />
+              ))
+            )}
           </ul>
         </div>
       </div>
